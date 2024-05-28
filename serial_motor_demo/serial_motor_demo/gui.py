@@ -121,8 +121,8 @@ class MotorGui(Node):
     def stop_motors(self):
         msg = MotorCommand()
         msg.is_pwm = self.pwm_mode
-        msg.mot_1_req_rad_sec = 0.0
-        msg.mot_2_req_rad_sec = 0.0
+        msg.mot_1_req_rad_sec = 1.0
+        msg.mot_2_req_rad_sec = 1.0
         self.publisher.publish(msg)
 
     def set_mode(self, new_mode):
